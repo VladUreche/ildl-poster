@@ -40,10 +40,8 @@
 %\renewcommand*\rmdefault{iwona}
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
-
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw=black!80,line width=1mm,inner sep=2pt] (char) {#1\quad};}\,}
-
 \newcommand*{\mystrut}{\rule[-.15\baselineskip]{0pt}{0.8\baselineskip}}
 \newcommand*\rectangled[1]{\tikz[baseline=(char.base)]{
             \node[shape=rectangle,draw=black!80,line width=1mm,inner sep=5pt, rounded corners=8pt,fill=white] (char) {\mystrut #1};}}
@@ -80,20 +78,20 @@
 \setblocktitletextcolor{dark-red}
 \setinnerblocktitlefillcolor{dark-red-title}
 
-\renewcommand\BackgroundPicture{
-\begin{tikzpicture}
-    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\pagewidth]{ecocloud-back.pdf}};
-    %\draw [fill=white, line=none] (79,114) rectangle (90,120);
-    \fill[white] (74.9,114) rectangle (85,119);
-    \node(qr) at (79.4,114.5) {\includegraphics[scale=0.7]{../graphs/qr.pdf}};
+% \renewcommand\BackgroundPicture{
+% \begin{tikzpicture}
+%     \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\pagewidth]{ecocloud-back.pdf}};
+%     %\draw [fill=white, line=none] (79,114) rectangle (90,120);
+%     \fill[white] (74.9,114) rectangle (85,119);
+%     \node(qr) at (79.4,114.5) {\includegraphics[scale=0.7]{../graphs/qr.pdf}};
 
-\end{tikzpicture}
-  % \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics{};
-  %\addlogo[south west]{(0.0,0.0)}{90mm}{ldl-frog.pdf}
-}
-% %
-%   \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vspace{40mm}\left\kern44mm\includegraphics[width=250,keepaspectratio]{ldl-frog.pdf}\vfill}}
+% \end{tikzpicture}
+%   % \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics{};
+%   %\addlogo[south west]{(0.0,0.0)}{90mm}{ldl-frog.pdf}
 % }
+% % %
+% %   \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vspace{40mm}\left\kern44mm\includegraphics[width=250,keepaspectratio]{ldl-frog.pdf}\vfill}}
+% % }
 
 \newcommand\ttt[1]{\texttt{#1}}
 \newcommand\tth[1]{\rectangled{\code{}{#1}}}
@@ -117,7 +115,6 @@
   \vspace{-0.1em}
 }
 
-
 % Set underline thickness
 % http://latex-community.org/forum/viewtopic.php?f=44&t=18362
 \usepackage{soul}
@@ -127,11 +124,12 @@
 % \renewcommand{\ttdefault}{pcr}
 
 \title{
-\raggedright
-  \tiny\textcolor{white}{.}\Large{\color{ecocloud-blue}Language and Compiler Support for} \\[-7mm]
-  \Huge{\color{ecocloud-blue}Data-Centric Optimizations} \\ [3mm]
-  \footnotesize\textcolor{white}{.}\large{Vlad Ureche, EPFL <vlad.ureche@epfl.ch>}
-  \vspace{-28mm}
+  \vspace{-3mm}\LARGE{\textbf{Automating Ad hoc Data Representation Transformations (OOPSLA'15)}\bkpspace}\vspace{-2mm}
+}
+\author{Vlad Ureche$^\dagger$ \kern1em Aggelos Biboudis$^*$ \kern1em Yannis Smaragdakis$^*$ \kern1em Martin Odersky$^\dagger$\\
+  École polytechnique fédérale de Lausanne, Switzerland$^\dagger$ \kern1em University of Athens$^*$ \\
+  \texttt{\frenchspacing{}\{first.last\}@epfl.ch$^\dagger$ \frenchspacing{}biboudis@di.uoa.gr \frenchspacing{}smaragd@di.uoa.gr \; \texttt{\frenchspacing{}scala-ldl.org}}
+  \vspace{-17mm}
 }
 
 \usepackage{soul}
@@ -141,8 +139,8 @@
 
 %%%%% ---------- the background picture ---------- %%%%%
 %% to change it modify the macro \BackgroundPicture
-\ClearShipoutPicture
-\AddToShipoutPicture{\BackgroundPicture}
+% \ClearShipoutPicture
+% \AddToShipoutPicture{\BackgroundPicture}
 
 \noindent % to have the picture right in the center
 \begin{tikzpicture}
