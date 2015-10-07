@@ -79,11 +79,19 @@
 \setinnerblocktitlefillcolor{dark-red-title}
 
 \renewcommand\BackgroundPicture{
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\pagewidth]{}};
+    %\draw [fill=white, line=none] (79,114) rectangle (90,120);
+    \fill[white] (74.9,110) rectangle (85,119);
+    \node(qr) at (78.4,111.5) {\includegraphics[scale=0.23]{ldl-frog.pdf}};
+
+\end{tikzpicture}
   % \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics{};
-  %   \addlogo[south west]{(0.0,0.0)}{90mm}{ldl-frog.pdf}
-  % }
-  \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vspace{40mm}\left\kern44mm\includegraphics[width=250,keepaspectratio]{ldl-frog.pdf}\vfill}}
+  %\addlogo[south west]{(0.0,0.0)}{90mm}{ldl-frog.pdf}
 }
+% %
+%   \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vspace{40mm}\left\kern44mm\includegraphics[width=250,keepaspectratio]{ldl-frog.pdf}\vfill}}
+% }
 
 \newcommand\ttt[1]{\texttt{#1}}
 \newcommand\tth[1]{\rectangled{\code{}{#1}}}
@@ -116,8 +124,7 @@
 % \renewcommand{\ttdefault}{pcr}
 
 \title{
-\raggedright
-  \vspace{-3mm}\LARGE{\textbf{Automating Ad hoc Data Representation Transformations (OOPSLA'15)}\bkpspace}\vspace{-2mm}
+  \vspace{-3mm}\LARGE{\textbf{Automating Ad hoc Data Representation Transformations}\bkpspace}\vspace{-2mm}
 }
 \author{
   Vlad Ureche$^\dagger$ \kern1em Aggelos Biboudis$^*$ \kern1em Yannis Smaragdakis$^*$ \kern1em Martin Odersky$^\dagger$\\
@@ -147,12 +154,12 @@
   \ifthenelse{\equal{\template}{1}}{
     \titleblock[(0,0)]{47}{1}
   }{
-    \titleblock[(20, -0.5)]{47}{1.5}
+    \titleblock[(-3, -0.5)]{47}{1.5}
   }
 
   %% a logo can be added to the title block
   %% #1 - anchor relative to the title block, #2 - shift, #3 - width, #3 - file name
-%   \addlogo[south west]{(-2,0.0)}{90mm}{ldl-frog.pdf}
+  % \addlogo[south west]{(-5,0.0)}{90mm}{ldl-frog.pdf}
 
   \blocknode%
     {\circled{1} Data Representation Problem}%
