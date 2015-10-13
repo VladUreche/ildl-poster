@@ -15,7 +15,7 @@
 \usepackage[margin=\margin cm, paperwidth=84.1cm, paperheight=118.9cm]{geometry}
 
 \usepackage{fancyvrb}
-
+\usepackage{amsmath}
 %% changing the fonts
 \usepackage{cmbright}
 %\usepackage[default]{cantarell}
@@ -80,7 +80,7 @@
 
 \renewcommand\BackgroundPicture{
 \begin{tikzpicture}
-    \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\pagewidth]{}};
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {};
     %\draw [fill=white, line=none] (79,114) rectangle (90,120);
     \fill[white] (74.9,110) rectangle (85,119);
     \node(qr) at (78.4,111.5) {\includegraphics[scale=0.23]{ldl-frog.pdf}};
@@ -128,7 +128,7 @@
 }
 \author{
   Vlad Ureche$^\dagger$ \kern1em Aggelos Biboudis$^*$ \kern1em Yannis Smaragdakis$^*$ \kern1em Martin Odersky$^\dagger$\\
-  École polytechnique fédérale de Lausanne, Switzerland$^\dagger$ \kern1em University of Athens$^*$ \\
+  École polytechnique fédérale de Lausanne, Switzerland$^\dagger$ \kern1em University of Athens$^*$\\
   \texttt{\frenchspacing{}\{first.last\}@epfl.ch$^\dagger$ \frenchspacing{}biboudis@di.uoa.gr \frenchspacing{}smaragd@di.uoa.gr \; \texttt{\frenchspacing{}scala-ldl.org}}
   \vspace{-17mm}
 }
