@@ -79,19 +79,12 @@
 \setinnerblocktitlefillcolor{dark-red-title}
 
 \renewcommand\BackgroundPicture{
-\begin{tikzpicture}
+  \begin{tikzpicture}
     \node[anchor=south west,inner sep=0] (image) at (0,0) {};
-    %\draw [fill=white, line=none] (79,114) rectangle (90,120);
     \fill[white] (74.9,110) rectangle (85,119);
-    \node(qr) at (78.4,111.5) {\includegraphics[scale=0.23]{ldl-frog.pdf}};
-
-\end{tikzpicture}
-  % \node[anchor=south west,inner sep=0] at (0,0) {\includegraphics{};
-  %\addlogo[south west]{(0.0,0.0)}{90mm}{ldl-frog.pdf}
+    \node(qr) at (77.4,111.5) {\includegraphics[scale=0.23]{ldl-frog.pdf}};
+  \end{tikzpicture}
 }
-% %
-%   \put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vspace{40mm}\left\kern44mm\includegraphics[width=250,keepaspectratio]{ldl-frog.pdf}\vfill}}
-% }
 
 \newcommand\ttt[1]{\texttt{#1}}
 \newcommand\tth[1]{\rectangled{\code{}{#1}}}
@@ -124,13 +117,15 @@
 % \renewcommand{\ttdefault}{pcr}
 
 \title{
-  \vspace{-3mm}\LARGE{\textbf{Automating Ad hoc Data Representation Transformations}\bkpspace}\vspace{-2mm}
+  \vspace{-7mm}\LARGE{\textbf{Automating Ad hoc Data Representation Transformations}\bkpspace}\vspace{-3mm}
 }
 \author{
-  Vlad Ureche$^\dagger$ \kern1em Aggelos Biboudis$^*$ \kern1em Yannis Smaragdakis$^*$ \kern1em Martin Odersky$^\dagger$\\
-  École polytechnique fédérale de Lausanne, Switzerland$^\dagger$ \kern1em University of Athens$^*$\\
-  \texttt{\frenchspacing{}\{first.last\}@epfl.ch$^\dagger$ \frenchspacing{}biboudis@di.uoa.gr \frenchspacing{}smaragd@di.uoa.gr \; \texttt{\frenchspacing{}scala-ldl.org}}
-  \vspace{-17mm}
+  Vlad Ureche$^1$ \kern1em Aggelos Biboudis$^2$ \kern1em Yannis Smaragdakis$^2$ \kern1em Martin Odersky$^1$\\
+  École polytechnique fédérale de Lausanne, Switzerland$^1$ \kern1em University of Athens$^2$\\
+  \texttt{\frenchspacing{}\{first.last\}@epfl.ch$^1$
+    \frenchspacing{}biboudis@di.uoa.gr
+    \frenchspacing{}smaragd@di.uoa.gr \; {\small \texttt{\frenchspacing{}scala-ldl.org}}}
+  \vspace{-13mm}
 }
 
 \usepackage{soul}
